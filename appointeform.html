@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+	<title>hospital/appointement</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+
+
+<style>
+
+
+	.app{
+		width: 200px;
+		height: auto;
+		align-content: center;
+		margin-left: 200px;
+
+	}
+	h3{
+		margin-top: 50px;
+	}
+
+
+.scrollup{
+  position: fixed;
+  top: 90%;
+  left: 95%;
+}
+
+	.fas , .fab{
+  font-size: 50px;
+  
+}
+	footer{
+  background-color: #7EB6FF ;
+  color: rgba(255,255,0,0.5);
+
+}
+iframe{
+  border: 3px solid rgb(255,255,0);
+  border-radius: 8px;
+}
+@media(min-width: 800px){
+
+  .navbar-nav{
+  margin-left: 100px;
+}
+}
+/*navbar*/
+.modal-body, .modal-header, .modal-footer{
+ background-color: #7EB6FF ;
+ color: rgba(255,255,0,0.5);
+}
+/*for the nav*/
+nav li:hover{
+  font-size: 1rem;
+  font-weight: bold;
+  color: blue;}
+
+
+
+	@media (max-width: 1200px){
+
+ .scrollup{
+  position: fixed;
+  top: 90%;
+  left: 93%;
+}
+
+	}
+@media (max-width: 1200px){
+  iframe{
+    width: 300px;
+  }}
+@media (max-width:720px){
+
+  .scrollup{
+  position: fixed;
+  top: 90%;
+  left: 90%;
+}
+html{
+  scroll-behavior: smooth;
+
+}
+  
+  }
+</style>
+<body>
+<header id="nagavation">  
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top" >
+    <a href="index.html " class="navbar-brand">
+      <img src="logo.jpg" class="" width="50" height="50" alt="">
+    Hospital</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#mainnav">
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+    <div class="navbar-collapse collapse" id="mainnav">
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a href="index.html " class="nav-link" target="_top">Events/notice</a>
+
+
+        </li>
+        <li class="nav-item">
+          <a href="appointeform.html " class="nav-link active" target="_top">Doctor appointment</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html" class="nav-link" target="_top">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a href="doctorinfo.html" class="nav-link" target="_top">Our doctor</a>
+        </li>
+        <li class="nav-item">
+          <!-- dropdown list for the about us -->
+          <a href=" " class="nav-link dropdown-toggle" data-toggle="dropdown" role="button">About us</a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a href="index.html " class="dropdown-item" target="_top">introduction</a>
+            <a href="diseasetopics.html" class="dropdown-item" target="_top">services</a>
+            <a href="index.html " class="dropdown-item" target="_top">message from chairperson</a>
+            <a href="index.html " class="dropdown-item" target="_top">our objectives</a>
+            
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#Emergency" class="btn-link nav-link" data-toggle="modal">Emergency</a>
+                 </li>
+      </ul>
+      <button class="btn btn-outline-info btn-sm d-sm-block ml-lg-auto" data-toggle="modal" data-target="#ModalExample">Send us message</button>
+      
+    </div>
+     
+    
+  </nav>
+  
+  <div id="ModalExample" class="modal fade">
+    <div class="modal-dialog-centered modal-dialog">
+        <div class="modal-content">
+           
+            <div class="modal-body">
+                <form role="form" method="POST" action="">
+                    <input type="hidden" name="_token" value="">
+                    <div class="form-group">
+                        <div>
+                            <input type="text" class="form-control" name="name" value="" placeholder="YOUR NAME" required="">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea class="form-control" rows="4" placeholder="YOUR MESSAGE" required=""></textarea>
+                    </div>
+                    <div class="d-flex justify-content-center">
+            <button class="btn  btn-block btn-info" type="submit">send</button>
+          </div>
+                </form>
+            </div>
+            <!-- <div class="modal-footer text-xs-center">
+                Don't have an account? <a href="/auth/register">Sign up »</a>
+            </div> -->
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+  <!-- modal pop up for the emergency -->
+  <div class="modal" tabindex="-1" role="dialog" id="Emergency">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"> FOR EMERGENCY</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                  
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-4">
+                <i class="fas fa-user-astronaut align-items-center"></i>
+                <p>0142423<br>01434342</p>
+
+                
+
+                
+              </div>
+              <div class="col-md-4 ml-auto">
+                <i class="fas fa-ambulance"></i>
+                <p>9803111111<br>9803222222</p>
+                
+              </div>
+              
+            </div>
+            
+          </div>
+                  
+        </div>
+        <div class="modal-footer">
+                     <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+        </div>        
+                
+      </div>
+              
+    </div>
+            
+  </div>
+  <div class="py-5">
+    
+  </div>
+
+
+
+</div>
+     <div class="scrollup">
+    <a href="#nagavation" class="btn-link" ><span class="mx-md-3 mx"><i class="fas fa-caret-square-up"></i></span></a>
+  </div>
+
+	<div class="container">
+	   <h4 class="text-center">Request an Appointment</h4>
+	   <img src="appoint.jpg"  class="img-fluid app">
+	</div>
+	<section class="container text-capitalize py-4 px-4">
+	  <div class="card">
+	    <div class="card-body mb-3">
+		     <h3>patients information</h3>
+		     <form method="post" action="" class="">
+			 <div class="form-row" class="">
+				<div class="form-group col-md-4 ">
+					<label for="name">patients name</label>
+					<input type="text" name="" class="form-control" id="name" required="">
+
+					
+				</div>
+				<div class="form-group col-md-4">
+					<label for="adress">address</label>
+					<input type="text" name="" class="form-control" required="">
+				</div>	
+	            
+					<div class="form-group col-md-4">
+							<label for="phone">phone number</label>
+							<input type="text" name="" id="phone" class="form-control" required="">
+							
+					
+					</div>
+
+					
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-4">
+						<label for="email">email adress</label>
+						<input type="email" name="" id="email" class="form-control">
+						
+					</div>
+					<div class="form-group col-md-2">
+						<label for="gender" class="custom-select-label">gender</label>
+						<select class="custom-select" id="gender">
+                                <option selected>male</option>
+                                <option value="1">female</option>
+                                <option value="2">other</option>
+                                
+                        </select>
+					</div>
+					<div class="form-group col-md-2">
+						<label for="day" class="custom-select-label">death of birth</label>
+						<select class="custom-select " id="day">
+                                <option selected>day</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                
+                        </select>
+                        
+					</div>
+					<div class="form-group col-md-2 mt-0 mt-md-2">
+						<label></label>
+						<select class="custom-select " id="day">
+                                <option selected>month</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                
+                        </select>
+                        
+					</div>
+					<div class="form-group col-md-2 mt-0 mt-md-2">
+						<label></label>
+						<select class="custom-select " id="day">
+                                <option selected>year</option>
+                                <option value="1">2019</option>
+                                <option value="2">2018</option>
+                                <option value="3">2017</option>
+                                <option value="4">2016</option>
+                                <option value="5">2015</option>
+                                <option value="6">2014</option>
+                                <option value="7">2013</option>
+                                <option value="8">2012</option>
+                                
+                        </select>
+                        
+					</div>
+					
+				</div>
+				
+			</div>
+			<hr>
+			<h3>schedule information</h3>
+			<div class="form-row container">
+				<div class="form-group col-md-4">
+					<label for="department">select department</label>
+					<select class="custom-select" id="department">
+						<option selected>chose department</option>
+                         <option value="1">neurology</option>
+                          <option value="2">ent</option>
+                          <option value="3">eye care</option>
+                          <option value="4">dentiest</option>
+                          <option value="5">puomonology</option>
+                          <option value="6">obesterics</option>
+                          <option value="7">seurgeon</option>
+                          <option value="8">physicans</option>
+						
+					</select>
+					
+				</div>
+				<div class="form-group col-md-4">
+					<label for="doct">select doctors</label>
+					<select class="custom-select" id="doct">
+						<option selected>chose dotor</option>
+                         <option value="1">dr. nagma</option>
+                          <option value="2">dr. reskey</option>
+                          <option value="3">dr. dependra</option>
+                          <option value="4">dr. anupama</option>
+                          <option value="5">dr. rajendra</option>
+                          <option value="6">dr. deepak</option>
+                          <option value="7">dr. rajaram</option>
+                          <option value="8">dr.rameshwor</option>
+						
+					</select>
+					
+				</div>
+				<div class="form-group col-md-4 container">
+				
+		            <div class="md-form">
+		            	<label for="date">chose date</label>
+                         <input placeholder="Selected date" type="text" id="date" class="form-control datepicker">
+                    </div>
+				</div>
+				
+			</div>
+			
+
+			
+			<h3>prefered time</h3>
+			<div class="form-row container">
+				<div class="form-group col-md-6">
+					<select class="custom-select">
+						<option selected>10am-12pm</option>
+                         <option value="1">12pm-2pm</option>
+                          <option value="2">2pm-4pm</option>
+                          <option value="3">4pm-6pm</option>
+						
+					</select>
+				
+					
+				</div>
+				<div class="col-md-6"><button class="btn btn-block btn-info">send</button></div>
+				
+			</div>
+			<div class="form-group bg-secondary m-2">
+				<p class="text-center text-warning">Please Note: Appointment date and time requested would be confirmed back to you through our appointment section. </p>
+			</div>
+			
+
+		</form>
+	 </div>
+	 </div>	
+		
+	</section>
+	<footer class="my-2 mt-4 p-4" data-aos="fade-up">
+  <div class="container">
+    <div class="row">
+       <div class="col-lg-4 d-none d-lg-inline">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.43728830109!2d85.32095551453826!3d27.703781732256655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19a86d92de5f%3A0xd6a23381c4e35c7e!2sKantipur+City+College!5e0!3m2!1sen!2snp!4v1556285084513!5m2!1sen!2snp" width="350" height="350" frameborder="0"  allowfullscreen ></iframe> 
+        
+      </div>
+      <div class="col-sm-6 col-lg-4 ">
+        <img src="logo.jpg" class="float-left" width="50" height="50" alt="">
+        <h4 class="p-2 ml-5">Random Hospital</h4>
+        <p class=""><i class="fas fa-map-marked-alt"></i> <span class="text-center ml-2 add">putalalisadak, kathmandu</span></p>
+        <p class=""><i class="fas fa-mobile-alt"></i><span class="text-center ml-2"> 9825131071</span></p>
+        <p class=""><i class="fas fa-envelope-square"></i><span class="text-center ml-2">randomhospital@gmail.com</span></p>
+
+
+        
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <form class="form-group p-md-4 pd-2 ml-lg-3 mr-sm-3" method="post" action=">
+          <input type="text" name="" placeholder="NAME" class="form-control mb-2" required="">
+          <textarea rows="5" class="form-control mb-2" placeholder="your message" required=""></textarea>
+          <div class="d-flex justify-content-center">
+            <button class="btn  btn-block btn-info" type="submit">send</button>
+          </div>  
+        </form>
+              <div class="ml-sm-5">
+        <a href="www.facebook.com"><span class="mx-md-3 mx"><i class="fab fa-facebook-f "></i></span></a>
+                <a href="www.linked.com" ><span class="mx-md-2"><i class="fab fa-linkedin"></i></span></a>
+                <a href="www.reddit.com"><span class="mx-md-3 mx"><i class="fab fa-reddit-square "></i></span></a>
+        </div>
+      </div>
+      
+    </div>
+    <div class="footer-copyright text-center text-muted py-3"> © 2019 copyright: created by anjit</div>
+    
+    
+  </div>
+  
+</footer>
+	
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script >
+	// Data Picker Initialization
+$('.datepicker').pickadate();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family=Artifika"); 
+/*google fonts*/
+
+html{
+  scroll-behavior: smooth;
+
+}
+body{
+  font-family: 'Artifika', serif;
+}
+.diseasimg{
+	max-width: 570px;
+	max-height: auto;
+}
+.btn-link{
+	text-transform: uppercase;
+
+}
+.card-body{
+      background-color: rgba(255,255,0,0.5);
+      color:  #0000A0;
+
+}
+.scrollup{
+  position:fixed;
+  top: 90%;
+  left: 95%;
+}
+.fas , .fab{
+  font-size: 50px;
+  
+}
+
+/*footer and navbar*/
+footer{
+  background-color: #7EB6FF ;
+  color: rgba(255,255,0,0.5);
+
+}
+iframe{
+  border: 3px solid rgb(255,255,0);
+  border-radius: 8px;
+}
+/*navbar*/
+.modal-body, .modal-header, .modal-footer{
+ background-color: #7EB6FF ;
+ color: rgba(255,255,0,0.5);
+}
+/*for the nav*/
+nav li:hover{
+  font-size: 1rem;
+  font-weight: bold;
+  color: blue;}
+
+@media(min-width: 800px){
+
+  .navbar-nav{
+  margin-left: 100px;
+}
+}
+
+
+@media (max-width: 1200px){
+
+ .scrollup{
+  position:fixed ;
+  top: 90%;
+  left: 93%;
+
+}
+.navbar-nav{
+  margin-left: 40px;
+}
+  iframe{
+    width: 300px;
+  }
+}
+@media (max-width:720px){
+
+  .scrollup{
+  position: fixed;
+  top: 90%;
+  left: 90%;
+}
+  
+  }
+@media(max-width: 600px){
+  .scrollup{
+position: fixed;
+  top: 90%;
+  left: 85%;
+
+  }
+}
+
