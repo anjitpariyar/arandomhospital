@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>diseasetopics</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="diseasetopics.css">
+</head>
+<body>
+<header id="nagavation">  
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg d-flex justify-content-lg-around fixed-top" >
+    <a href="hospital\index.html " class="navbar-brand">
+      <img src="logo.jpg" class="" width="50" height="50" alt="">
+    Hospital</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#mainnav">
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+    <div class="navbar-collapse collapse" id="mainnav">
+      <ul class="navbar-nav col-lg-9 d-flex justify-content-center">
+        <li class="nav-item">
+          <a href="E:\hospital\index.html " class="nav-link" target="_top">Events/notice</a>
+
+
+        </li>
+        <li class="nav-item">
+          <a href="appointeform.html " class="nav-link" target="_top">Doctor appointment</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html" class="nav-link" target="_top">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a href="doctorinfo.html" class="nav-link" target="_top">Our doctor</a>
+        </li>
+        <li class="nav-item">
+          <!-- dropdown list for the about us -->
+          <a href=" " class="nav-link dropdown-toggle active" data-toggle="dropdown" role="button">About us</a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a href="index.html " class="dropdown-item" target="_top">introduction</a>
+            <a href="diseasetopics.html" class="dropdown-item" target="_top">services</a>
+            <a href="index.html " class="dropdown-item" target="_top">message from chairperson</a>
+            <a href="index.html " class="dropdown-item" target="_top">our objectives</a>
+            
+          </div>
+        </li>
+        <li class="nav-item">
+          <a href="#Emergency" class="btn-link nav-link" data-toggle="modal">Emergency</a>
+                 </li>
+      </ul>
+      <button class="btn btn-outline-info btn-sm d-sm-block ml-auto" data-toggle="modal" data-target="#ModalExample">Send us message</button>
+      
+    </div>
+     <div class="scrollup">
+    <a href="#nagavation" class="btn-link" ><span class="mx-md-3 mx"><i class="fas fa-caret-square-up"></i></span></a>
+  </div>
+    
+  </nav>
+  
+  <div id="ModalExample" class="modal fade">
+    <div class="modal-dialog-centered modal-dialog">
+        <div class="modal-content">
+           
+            <div class="modal-body">
+                <form role="form" method="POST" action="">
+                    <input type="hidden" name="_token" value="">
+                    <div class="form-group">
+                        <div>
+                            <input type="text" class="form-control" name="name" value="" placeholder="YOUR NAME" required="">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea class="form-control" rows="4" placeholder="YOUR MESSAGE" required=""></textarea>
+                    </div>
+                    <div class="d-flex justify-content-center">
+            <button class="btn  btn-block btn-info" type="submit">send</button>
+          </div>
+                </form>
+            </div>
+            <!-- <div class="modal-footer text-xs-center">
+                Don't have an account? <a href="/auth/register">Sign up »</a>
+            </div> -->
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+  <!-- modal pop up for the emergency -->
+  <div class="modal" tabindex="-1" role="dialog" id="Emergency">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"> FOR EMERGENCY</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                  
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-4">
+                <i class="fas fa-user-astronaut align-items-center"></i>
+                <p>0142423<br>01434342</p>
+
+                
+
+                
+              </div>
+              <div class="col-md-4 ml-auto">
+                <i class="fas fa-ambulance"></i>
+                <p>9803111111<br>9803222222</p>
+                
+              </div>
+              
+            </div>
+            
+          </div>
+                  
+        </div>
+        <div class="modal-footer">
+                     <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+        </div>        
+                
+      </div>
+              
+    </div>
+            
+  </div>
+  <div class="py-5">
+    
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="scrollup">
+    <a href="#diseasetopics" class="btn-link" ><span class="mx-md-3 mx"><i class="fas fa-caret-square-up"></i></span></a>
+  </div>
+	
+  <div class="accordion" id="diseasetopics">
+  	<div class="card">
+  		<div class="card-header" id="ENTTITLE">
+  			<h2 class="mb-0">
+  				<button class="btn btn-link" data-toggle="collapse" data-target="#ENT">ENT</button>
+  			</h2>
+  			
+  		</div>
+  		<div id="ENT" class="collapse show container row" data-parent="#diseasetopics">
+  			<div class="card-body col-md-8">
+  				<p class=" card-text"><span class="diseasehead">ENT physician:</span> A medical specialist who is concerned with the diagnosis and treatment of disorders of the head and neck, including particularly the ears, nose, and throat. ENT doctors are also called otolaryngologists.</p>
+  				
+  			</div>
+        
+  			<div class="col-md-4">
+                  <img src="disease/entimg.jpg" class="card-img img-fluid diseaseimg" alt="its a picture of ENT">
+            </div>
+  			
+  		</div>
+  		
+  	</div>
+  	<div class="card">
+  		<div class="card-header" id="diabetesTITLE">
+  			<h2 class="mb-0">
+  				<button class="btn btn-link" data-toggle="collapse" data-target="#diabetes">DIABETES</button>
+  			</h2>
+  			
+  		</div>
+  		<div id="diabetes" class="collapse container row" data-parent="#diseasetopics">
+  			<div class="card-body col-md-8">
+  				<p class="card-text"> Diabetes is a disease in which the body is unable to properly use and store glucose (a form of sugar). Glucose backs up in the bloodstream — causing one’s blood glucose (sometimes referred to as blood sugar) to rise too high.</p>
+  				
+  			</div>
+  			<div class="col-md-4">
+                  <img src="disease/daibetesimg.jpg" class="card-img img-fluid diseaseimg" alt="its a picture of diabetes">
+            </div>
+  			
+  		</div>
+  	</div>	
+  	<div class="card">
+  		<div class="card-header" id="thyroidTITLE">
+  			<h2 class="mb-0">
+  				<button class="btn btn-link" data-toggle="collapse" data-target="#thyroid">THYROID</button>
+  			</h2>
+  			
+  		</div>
+  		<div id="thyroid" class="collapse container row" data-parent="#diseasetopics">
+  			<div class="card-body col-md-8">
+  				<p class="card-text"> Thyroid is a small gland, similar to a butterfly, situated in the lower part of the neck. The primary objective of this gland is to secrete hormones such as tri-iodothyronine, abbreviated as T3, and thyroxin, abbreviated as T4. These thyroid hormones provide energy to cells of the body and are one of the most important hormones to control the body’s metabolism. The most common thyroid problems include Hypothyroidism, Hyperthyroidsim.</p>
+  				
+  			</div>
+  			<div class="col-md-4">
+                  <img src="diseasetopic\thyroidimg.jpg" class="card-img img-fluid diseaseimg" alt="its a picture of thyroid">
+            </div>
+  			
+  		</div>
+  		
+  	</div>
+  	<div class="card">
+  		<div class="card-header" id="surgeonTITLE">
+  			<h2 class="mb-0">
+  				<button class="btn btn-link" data-toggle="collapse" data-target="#surgeon">SURGEON</button>
+  			</h2>
+  			
+  		</div>
+  		<div id="surgeon" class="collapse container row" data-parent="#diseasetopics">
+  			<div class="card-body col-md-8">
+  				<p class=" card-text"> <span class="diseasehead">Surgeon:</span> A physician who treats disease, injury, or deformity via operative or manual methods to physically change body tissues. The definition of surgeon has begun to blur in recent years as surgeons have begun to minimize the cutting, employing new technologies that are minimally invasive (such as using scopes and lasers). In England, a surgeon was once a practitioner without an MD degree but with the license of the Royal College of Surgeons.</p>
+  				
+  			</div>
+  			<div class="col-md-4">
+                  <img src="diseasetopic\surgeonimg.jpg" class="card-img img-fluid diseaseimg" alt="its a picture of surgeon">
+            </div>
+  			
+  		</div>
+  	</div>	
+  	<div class="card">
+  		<div class="card-header" id="orthopedicsTITLE">
+  			<h2 class="mb-0">
+  				<button class="btn btn-link" data-toggle="collapse" data-target="#orthopedics">ORTHOPEDICS</button>
+  			</h2>
+  			
+  		</div>
+  		<div id="orthopedics" class="collapse container row" data-parent="#diseasetopics">
+  			<div class="card-body col-md-8">
+  				<p class=" card-text"> Orthopaedics is the medical specialty that focuses on injuries and diseases of your body's musculoskeletal system. This complex system, which includes your bones, joints, ligaments, tendons, muscles, and nerves, allows you to move, work, and be active</p>
+  				
+  			</div>
+  			<div class="col-md-4">
+                  <img src="diseasetopic\orthopedicimg.jpg" class="card-img img-fluid diseaseimg" alt="its a picture of orthopedics">
+            </div>
+  			
+  		</div>
+  	</div>	
+  	<div class="card">
+  		<div class="card-header" id="gyanelogistTITLE">
+  			<h2 class="mb-0">
+  				<button class="btn btn-link" data-toggle="collapse" data-target="#gyanelogis">GYANEOLOGIS</button>
+  			</h2>
+  			
+  		</div>
+  		<div id="gyanelogis" class="collapse container row" data-parent="#diseasetopics">
+  			<div class="card-body col-md-8">
+  				<p class="card-text"> <span class="diseasehead">Gynecologist:</span> A physician who specializes in treating diseases of the female reproductive organs and providing well-woman health care that focuses primarily on the reproductive organs.</p>
+  				
+  			</div>
+  			<div class="col-md-4">
+                  <img src="diseasetopic\Gynecologistimg.jpg" class="card-img img-fluid diseaseimg" alt="its a picture of gyanelogis">
+            </div>
+  			
+  		</div>
+  	</div>	
+  	<div class="card">
+  		<div class="card-header" id="obstericianTITLE">
+  			<h2 class="mb-0">
+  				<button class="btn btn-link" data-toggle="collapse" data-target="#obsterician">OBSTERICIAN</button>
+  			</h2>
+  			
+  		</div>
+  		<div id="obsterician" class="collapse container row" data-parent="#diseasetopics">
+  			<div class="card-body col-md-8">
+  				<p class=" card-text"> An obstetrician is a doctor who specializes in pregnancy, childbirth, and a woman's reproductive system. Although other doctors can deliver babies, many women see an obstetrician, also called an OB/GYN. Your obstetrician can take care of you throughout your pregnancy, and give you follow-up care such as annual Pap tests for years to come.</p>
+  				
+  			</div>
+  			<div class="col-md-4">
+                  <img src="diseasetopic\obstetricianimg.jpg" class="card-img img-fluid diseaseimg" alt="its a picture of obsterician">
+            </div>
+  			
+  		</div>
+  	</div>	
+  	<div class="card">
+  		<div class="card-header" id="dentalTITLE">
+  			<h2 class="mb-0">
+  				<button class="btn btn-link" data-toggle="collapse" data-target="#dental">DENTAL</button>
+  			</h2>
+  			
+  		</div>
+  		<div id="dental" class="collapse container row" data-parent="#diseasetopics">
+  			<div class="card-body col-md-8">
+  				<p class="card-text"> Diseases of the Oral Cavity (Mouth and Teeth) is taken care by the Department of Dentistry and Dental Surgery. Be it carries or diseases of the gum and tongue, our specialists also take care of the mal-aligned teeth, do complicated surgeries of the oral cavity, surgeries for the cancers and for trauma. A beautifully designed department feels welcoming and our patients have loved the ambience..</p>
+  				
+  			</div>
+  			<div class="col-md-4">
+                  <img src="diseasetopic\dentistimg.jpg" class="card-img img-fluid diseaseimg" alt="its a picture of dental">
+            </div>
+  			
+  		</div>
+  	</div>	
+  	<div class="card">
+  		<div class="card-header" id="consulantTITLE">
+  			<h2 class="mb-0">
+  				<button class="btn btn-link" data-toggle="collapse" data-target="#consulant">CONSULANT</button>
+  			</h2>
+  			
+  		</div>
+  		<div id="consulant" class="collapse container row" data-parent="#diseasetopics">
+  			<div class="card-body col-md-8">
+  				<p class="card-text"> This triad of consulting models identifies the assumption upon which each rests. The consultant with adequate knowledge and self-insight will understand which model is appropriate to a given situation. The three models include: (1) purchase of expertise; (2) doctor-patient role; and (3) consultation process for problem solving. </p>
+  				
+  			</div>
+  			<div class="col-md-4">
+                  <img src="diseasetopic\consulantimg.jpg" class="card-img img-fluid diseaseimg" alt="its a picture of consulant">
+            </div>
+  			
+  		</div>
+  	</div>	
+  	<div class="card">
+  		<div class="card-header" id="physianTITLE">
+  			<h2 class="mb-0">
+  				<button class="btn btn-link" data-toggle="collapse" data-target="#physian">PHYSICIAN</button>
+  			</h2>
+  			
+  		</div>
+  		<div id="physian" class="collapse container row" data-parent="#diseasetopics">
+  			<div class="card-body col-md-8">
+  				<p class=" card-text"> Physicians (also called medical practitioner or doctors) care for patient’s in a variety of ways with the primary responsibility the well being of their patients. At times it can very stressful due to treating patients with life threatening injuries or chronic illnesses. Doctors include anesthesiologists, family and general practitioners, internists, obstetricians and gynecologists, pediatricians, psychiatrists, and surgeons.</p>
+  				
+  			</div>
+  			<div class="col-md-4">
+                  <img src="diseasetopic\physicansimg.jpg" class="card-img img-fluid diseaseimg" alt="its a picture of physian">
+            </div>
+  			
+  		</div>
+  	</div>	
+  	<div class="card">
+  		<div class="card-header" id="neuroTITLE">
+  			<h2 class="mb-0">
+  				<button class="btn btn-link" data-toggle="collapse" data-target="#neuro">NEURO</button>
+  			</h2>
+  			
+  		</div>
+  		<div id="neuro" class="collapse container row" data-parent="#diseasetopics">
+  			<div class="card-body col-md-8">
+  				<p class="card-text"> A neurologist is a doctor with specialized training in diagnosing and treating diseases of the brain, spinal cord, peripheral nerves, and muscles. Most of the time, a primary care doctor refers patients to a neurologist if they have symptoms that indicate a neurological condition.</p>
+  				
+  			</div>
+  			<div class="col-md-4">
+                  <img src="diseasetopic\neuroimg.jpg" class="card-img img-fluid diseaseimg" alt="its a picture of neuro">
+            </div>
+  			
+  		</div>
+  	</div>	
+  	<div class="card">
+  		<div class="card-header" id="skinTITLE">
+  			<h2 class="mb-0">
+  				<button class="btn btn-link" data-toggle="collapse" data-target="#skin">skin/dermatologist</button>
+  			</h2>
+  			
+  		</div>
+  		<div id="skin" class="collapse container row" data-parent="#diseasetopics">
+  			<div class="card-body col-md-8">
+  				<p class="card-text"> Dermatology is the branch of medicine dealing with the skin, nails, hair ( functions & structures ) and its diseases. It is a specialty with both medical and surgical aspects. A dermatologist is specialist doctor that manages diseases, in the widest sense, and some cosmetic problems of the skin, hair and nails.</p>
+  				
+  			</div>
+  			<div class="col-md-4">
+                  <img src="diseasetopic\Dermatologistimg.jpg" class="card-img img-fluid diseaseimg" alt="its a picture of skin">
+            </div>
+  			
+  		</div>
+  	</div>	
+  	<div class="card">
+  		<div class="card-header" id="radiologistTITLE">
+  			<h2 class="mb-0">
+  				<button class="btn btn-link" data-toggle="collapse" data-target="#radiologist">radiologist</button>
+  			</h2>
+  			
+  		</div>
+  		<div id="radiologist" class="collapse container row" data-parent="#diseasetopics">
+  			<div class="card-body col-md-8">
+  				<p class="card-text"> Radiology is a branch of medicine using radiation for the diagnosis and treatment of disease.  Radiology originally involved the use of X rays in the diagnosis of disease and the use of X rays, gamma rays, and other forms of ionizing radiation in the treatment of disease. In more recent years radiology has come also to embrace diagnosis by a method of organ scanning with the use of radioactive isotopes and also with nonionizing radiation, such as ultrasound waves and nuclear magnetic resonance.</p>
+  				
+  			</div>
+  			<div class="col-md-4">
+                  <img src="diseasetopic\radiologyimg.jpg" class="card-img img-fluid diseaseimg" alt="its a picture of radiologist">
+            </div>
+  			
+  		</div>
+  	</div>	
+  	<div class="card">
+  		<div class="card-header" id="ultrasonologistTITLE">
+  			<h2 class="mb-0">
+  				<button class="btn btn-link" data-toggle="collapse" data-target="#ultra">ultrasonoligist</button>
+  			</h2>
+  			
+  		</div>
+  		<div id="ultra" class="collapse container row" data-parent="#diseasetopics">
+  			<div class="card-body col-md-8">
+  				<p class="card-text"> Ultrasonography is a diagnostic medical procedure that uses sound waves to produce images on a screen, which allows medical providers to view internal structures of the body. In this lesson, you'll learn more about ultrasonography and its uses.</p>
+  				
+  			</div>
+  			<div class="col-md-4">
+                  <img src="diseasetopic\ultrasonologist.jpg" class="card-img img-fluid diseaseimg" alt="its a picture of ultra-sonoligist">
+            </div>
+  			
+  		</div>
+  	</div>	
+  	<div class="card">
+  		<div class="card-header" id="childTITLE">
+  			<h2 class="mb-0">
+  				<button class="btn btn-link" data-toggle="collapse" data-target="#child">child</button>
+  			</h2>
+  			
+  		</div>
+  		<div id="child" class="collapse container row" data-parent="#diseasetopics">
+  			<div class="card-body col-md-8">
+  				<p class="card-text"> Child specialists are pediatric health care professionals who work with children and families in hospitals and other settings to help them cope with the challenges of hospitalization, illness, and disability. They provide children with age-appropriate preparation for medical procedures, pain management and coping strategies, and play and self-expression activities. They also provide information, support, and guidance to parents, siblings, and other family members.</p>
+  				
+  			</div>
+  			<div class="col-md-4">
+                  <img src="diseasetopic\childimg.jpg" class="card-img img-fluid diseaseimg" alt="its a picture of child">
+            </div>
+  			
+  		</div>
+  	</div>	
+  		
+  	<div class="card">
+  		<div class="card-header" id="venerologistTITLE">
+  			<h2 class="mb-0">
+  				<button class="btn btn-link" data-toggle="collapse" data-target="#venerologist">VENEROLOGIST</button>
+  			</h2>
+  			
+  		</div>
+  		<div id="venerologist" class="collapse container row" data-parent="#diseasetopics">
+  			<div class="card-body col-md-8">
+  				<p class="card-text"> Venereology is a branch of medicine that is concerned with the study and treatment of sexually transmitted diseases. The name derives from Roman goddess Venus, associated with love, beauty and fertility. A physician specializing in venereology is called a venereologist. In many areas of the world, the specialty is usually combined with dermatology.
+                The venereal diseases include bacterial, viral, fungal, and parasitic infections[3]. Some of the important diseases are HIV infection, syphilis, gonorrhea, candidiasis, herpes simplex, human papillomavirus infection, and genital scabies.</p>
+  				
+  			</div>
+  			<div class="col-md-4">
+                  <img src="diseasetopic\venerologistimg.png" class="card-img img-fluid diseaseimg" alt="its a picture of venerologist">
+            </div>
+  			
+  		</div>
+  	
+    </div>
+ </div>  
+ <div class="scrollup ">
+    <a href="#negavation" class="btn-link" ><span class="mx-md-3 mx"><i class="fas fa-caret-square-up"></i></span></a>
+  </div> 
+
+
+<footer class="my-2 mt-4 p-4" data-aos="fade-up">
+  <div class="container">
+    <div class="row">
+       <div class="col-lg-4 d-none d-lg-inline">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.43728830109!2d85.32095551453826!3d27.703781732256655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19a86d92de5f%3A0xd6a23381c4e35c7e!2sKantipur+City+College!5e0!3m2!1sen!2snp!4v1556285084513!5m2!1sen!2snp" width="350" height="350" frameborder="0"  allowfullscreen ></iframe> 
+        
+      </div>
+      <div class="col-sm-6 col-lg-4 ">
+        <img src="logo.jpg" class="float-left" width="50" height="50" alt="">
+        <h4 class="p-2 ml-5">Random Hospital</h4>
+        <p class=""><i class="fas fa-map-marked-alt"></i> <span class="text-center ml-2 add">putalalisadak, kathmandu</span></p>
+        <p class=""><i class="fas fa-mobile-alt"></i><span class="text-center ml-2"> 9825131071</span></p>
+        <p class=""><i class="fas fa-envelope-square"></i><span class="text-center ml-2">randomhospital@gmail.com</span></p>
+
+
+        
+      </div>
+      <div class="col-sm-6 col-lg-4">
+        <form class="form-group p-md-4 pd-2 ml-lg-3 mr-sm-3 method="post" action=""">
+          <input type="text" name="" placeholder="NAME" class="form-control mb-2" required="">
+          <textarea rows="5" class="form-control mb-2" placeholder="your message" required=""></textarea>
+          <div class="d-flex justify-content-center">
+            <button class="btn  btn-block btn-info" type="submit">send</button>
+          </div>  
+        </form>
+              <div class="ml-sm-5">
+        <a href="www.facebook.com"><span class="mx-md-3 mx"><i class="fab fa-facebook-f "></i></span></a>
+                <a href="www.linked.com" ><span class="mx-md-2"><i class="fab fa-linkedin"></i></span></a>
+                <a href="www.reddit.com"><span class="mx-md-3 mx"><i class="fab fa-reddit-square "></i></span></a>
+        </div>
+      </div>
+      
+    </div>
+    <div class="footer-copyright text-center text-muted py-3"> © 2019 copyright: created by anjit</div>
+    
+    
+  </div>
+  
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- scroll js -->
+<script src="bootstrap-4.0.0-dist/js/scrollReveal.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.0.js"></script>
+<script src="aos.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+     duration: 2000,
+    });
+  </script>
+</body>
+</html>
